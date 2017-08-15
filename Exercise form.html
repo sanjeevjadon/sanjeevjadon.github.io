@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form</title>
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  border-radius: 4px;
+}
+
+fieldset { 
+    overflow: hidden; 
+    width: 270px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+label { float: left; width: 120px; }
+
+
+</style>
+</head>
+
+<body>
+
+<form action="/action_page.php">
+<fieldset>
+  <p>
+      <label for="name">
+        <span>Name: </span>
+        <strong><abbr title="required"></abbr></strong>
+      </label>
+      <input type="text" id="name" name="username">
+    </p>
+    <p>
+      <label for="address">
+        <span>Address: </span>
+        <strong><abbr title="required"></abbr></strong>
+      </label>
+      <input type="text" id="address" name="username">
+    </p>
+    <p>
+      <label for="city">
+        <span>City: </span>
+        <strong><abbr title="required"></abbr></strong>
+      </label>
+      <input type="text" id="city" name="city">
+    </p>
+    <p>
+      <label for="state">
+        <span>State: </span>
+        <strong><abbr title="required"></abbr></strong>
+      </label>
+      <input type="text" id="state" name="state">
+    </p>
+   <p>
+      <label for="zip">
+        <span>Zip: </span>
+        <strong><abbr title="required"></abbr></strong>
+      </label>
+      <input type="text" id="zip" name="zip">
+    </p> 
+    <p>
+       <label for="magazine">
+       	 <span>Magazine:</span>
+       	 <strong><abbr title="required"></abbr></strong>
+       </label>
+      <select id="magazine" name="magazine">
+      	<option value="Ne">Newsweek</option>
+      	<option value="Da">Daily</option>
+      	<option value="we">weekand</option>
+      </select>
+    </p>
+    <p>
+       <label for="subscription">
+       	 <span>Subscription:</span>
+       	 </label>
+       <input  type="radio" name="year" checked> 1year
+       <input  type="radio" name="year" value="2years"> 2years
+       </p>
+
+
+<div class="container">
+    <div class="form-group">
+      <label for="additional comment">
+       <span>Additional Comment:</span>
+     </label>
+      <textarea class="form-control" rows="5" cols="50" id="comment"></textarea>
+    </div>
+  </form>
+</div>
+<button>Send Your Order</button>
+</fieldset>
+</form>
+
+</body>
+</head>
