@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sum()</title>
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+function sumAll() {
+    var i, sum = 0;
+    for(i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+} 
+document.getElementById("demo").innerHTML =
+sumAll(1,2,3,4);
+</script>
+
+</body>
+</html>
