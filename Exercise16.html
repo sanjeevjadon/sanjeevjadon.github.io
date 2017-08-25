@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>function translate</title>
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+var translate = function(text) {
+  var string = text.toLowerCase();
+  var vowels = ["a", "e", "i", "o", "u", " "];
+  var y = "";
+  for (i = 0; i < string.length; i++) {
+     var current = string.charAt(i); 
+    if (vowels.indexOf(current) != -1) {
+        y = (y + (current));
+    } else {
+        y = (y + (current + "o" + current));
+    }
+  }
+  return y;
+}
+
+console.log(translate("this is fun"));
+
+document.write("this is fun");
+
+</script>
+
+</body>
+</html>
