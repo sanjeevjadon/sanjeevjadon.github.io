@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>findlongestwords()</title>
+</head>
+
+<body>
+
+<p id="demo"></p>
+
+<script>
+	
+var findlongestwords = function(array){
+  var elements = array.lenght;
+  var count = 0;
+  for (i = 0; i < elements; i++){
+   if (array[i].lenght > count)	
+   	 count = array[i].lenght;
+  }
+  return count;
+}
+
+document.write(findlongestwords("array"))
+</script>
+
+</body>
+</html>
