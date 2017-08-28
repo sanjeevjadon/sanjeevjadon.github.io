@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Represent</title>
+</head>
+
+<body>
+
+<div id="filler">
+	
+</div>
+
+<script>
+	
+function translate(string){
+     var lexicon = {"merry":"god", "christmas":"jul", "and":"och", "happy":"gott", "new":"nytt", "year":"år"},
+     q = "";
+    
+string.toLowerCase().split(" ").map(function(p, c){
+    q += lexicon[p] + ' ';
+   });
+    
+   return q;
+}
+
+
+var phrase = "Merry Christmas and Happy New Year",
+    x = translate(phrase);
+
+document.getElementById("filler").innerHTML = x;
+
+</script>
+
+</body>
+</html>
