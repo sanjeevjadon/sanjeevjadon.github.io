@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>function charFreq()</title>
+</head>
+
+<body>
+
+<div id="filler"></div>
+
+<script>
+	
+function charFreq(string){
+  return string.split('').reduce(function(object, letter){
+  	object[letter] = ++object[letter] || 1;
+  	return object;
+   }, {});
+}
+
+var phrase = "abbabcbdbabdbdbabababcbcbab",
+    x = charFreq(phrase);
+
+document.getElementById("filler").innerHTML = JSON.stringify(x);
+
+</script>
+
+</body>
+</html>
