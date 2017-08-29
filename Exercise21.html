@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>filterLongWords()</title>
+</head>
+
+<body>
+
+<div id="filler"></div>
+
+<script>
+
+function filterLongWords(arr, i){
+    var q = [], 
+        k = 0;
+
+    arr.map(function(p, c){
+        if(p.split('').length > i) q[k++] = p;
+    });
+
+    return q;
+};
+
+var words = ["first", "second", "third", "fourth"],
+    int = 5;
+    x = filterLongWords(words, int);
+
+x.map(function(item, index){
+    document.getElementById("filler").innerHTML += item + '<br />';
+});
+
+</script>
+
+</body>
+</html>
