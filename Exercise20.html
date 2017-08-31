@@ -6,21 +6,29 @@
 
 <body>
 
-<p id="demo"></p>
+<div id="filler"></div>
 
 <script>
 	
-var findlongestwords = function(array){
-  var elements = array.lenght;
-  var count = 0;
-  for (i = 0; i < elements; i++){
-   if (array[i].lenght > count)	
-   	 count = array[i].lenght;
-  }
-  return count;
-}
+function findLongWords(arr, i){
+    var q = [], 
+        k = 0;
 
-document.write(findlongestwords("array"))
+    arr.map(function(p, c){
+        if(p.split('').length > i) q[k++] = p;
+    });
+
+    return q;
+};
+
+var words = ["one", "two", "three", "four"],
+    int = 3;
+    x = findLongWords(words, int);
+
+x.map(function(item, index){
+    document.getElementById("filler").innerHTML += item + '<br />';
+});
+
 </script>
 
 </body>
