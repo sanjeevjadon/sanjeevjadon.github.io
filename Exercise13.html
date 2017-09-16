@@ -6,15 +6,21 @@
 
 <body>
 
-<p id="demo"></p>
+<div id="filler"></div>
 
 <script>
 
-document.getElementById("demo").innerHTML =
-Math.max(10,20);
+function maximum(a, b) {
+    if(a > b) return a
+        else return b;
+}
+
+var a = 10,
+    b = 20,
+    x = maximum(a,b);
+document.getElementById("filler").innerHTML += x;
 
 </script>
-
 
 </body>
 </html>
