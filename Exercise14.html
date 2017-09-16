@@ -6,13 +6,22 @@
 </head>
 <body>
 
-<p id="demo"></p>
+<div id="filler"></div>
 
 <script>
 
-document.getElementById("demo").innerHTML =
-Math.max(10,20,30);
+function maxOfThree(a, b, c){
+   if (a > b > c) return a , b
+   	     else return c
 
+}
+
+var a = 10,
+    b = 20,
+    c = 30,
+    x = maxOfThree(a, b, c);
+
+document.getElementById("filler").innerHTML += x;
 </script>
 
 
