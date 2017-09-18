@@ -6,21 +6,27 @@
 
 <body>
 
-<div id="filler"></div>
+<p id="demo"></p>
 
 <script>
 	
-function charFreq(string){
-  return string.split('').reduce(function(object, letter){
-  	object[letter] = ++object[letter] || 1;
-  	return object;
-   }, {});
+var charFreq = function(str){
+  var list = {};
+  var length = str.length;
+  for (var i = 0; i < length; i++) {  
+  if (str[i] in list) 
+    list[str[i]] += +1;
+  else 
+    list[str[i]] = 1;
+  }
+  console.log(list);
+  return list;
 }
 
-var phrase = "abbabcbdbabdbdbabababcbcbab",
-    x = charFreq(phrase);
+var phrase = "abbabcbdbabdbdbabababcbcbab";
+x = charFreq(phrase);
 
-document.getElementById("filler").innerHTML = JSON.stringify(x);
+document.getElementById('demo').innerHTML = JSON.stringify(x)
 
 </script>
 
