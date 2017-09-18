@@ -6,28 +6,22 @@
 
 <body>
 
-<div id="filler"></div>
+<p id="demo"></p>
 
 <script>
 
-function filterLongWords(arr, i){
-    var q = [], 
-        k = 0;
+var filterLongWords = function(array){
+  var length = array.length;
+  var longestWords = '';
+  for (i = 0; i < length; i++) {
+    if (array[i].length > longestWords.length) {
+      longestWords = array[i];
+    }
+  }
+  return longestWords;
+}
 
-    arr.map(function(p, c){
-        if(p.split('').length > i) q[k++] = p;
-    });
-
-    return q;
-};
-
-var words = ["first", "second", "third", "fourth"],
-    int = 5;
-    x = filterLongWords(words, int);
-
-x.map(function(item, index){
-    document.getElementById("filler").innerHTML += item + '<br />';
-});
+document.getElementById("demo").innerHTML = filterLongWords(['first','second','sanjeev','one'])
 
 </script>
 
