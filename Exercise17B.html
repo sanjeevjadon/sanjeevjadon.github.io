@@ -9,15 +9,15 @@
 <p id="demo"></p>
 
 <script>
-function sumAll() {
+function sumAll(arry) {
     var i, sum = 0;
-    for(i = 0; i < arguments.length; i++) {
-        sum += arguments[i];
+    for(i = 0; i < arry.length; i++) {
+        sum += arry[i];
     }
     return sum;
 } 
 document.getElementById("demo").innerHTML =
-sumAll(1,2,3,4);
+sumAll([11,22,33,44]);
 </script>
 
 </body>
