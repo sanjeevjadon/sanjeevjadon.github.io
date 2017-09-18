@@ -11,9 +11,17 @@
 <script>
 
 function maxOfThree(a, b, c){
-   if (a > b > c) return a , b
-   	     else return c
-
+   if (a > b ){
+   	if (a>c)
+   		return a;
+   	else
+   		return c;
+   }
+   else
+   	if (c > b)
+   		return c;
+   	else
+   		return b;
 }
 
 var a = 10,
