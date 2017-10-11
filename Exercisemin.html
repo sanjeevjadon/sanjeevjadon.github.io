@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>min of three no.</title>
+</head>
+
+<body>
+
+<div id="filler"></div>
+
+<script>
+
+function minofThree(a,b,c){
+if (a < b){
+  if(a < c)
+  	   return a;
+   else
+       return c;
+}
+else
+if (c < b)
+    return c;
+else
+    return b;
+}
+var a = 5;
+    b = 10;
+    c = 15;
+
+   x = minofThree(a,b,c);
+
+document.getElementById("filler").innerHTML += x;
+
+</script>
+
+</body>
+</html>
